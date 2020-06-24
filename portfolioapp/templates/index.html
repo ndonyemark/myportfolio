@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="nav-container">
+        <nav>
+            <h1 id="logo">Mark Ndonye</h1>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="" class="order">Projects</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="home">
+        <div class="showcase">
+            <h2>I am a Developer</h2>
+            <img src="{% static 'imgs/mark.jpg' %}" alt="">
+            <div class="info">
+                <h3>Its Just Me</h3>
+                <p>Mark the developer</p>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
+    

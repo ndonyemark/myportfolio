@@ -1,0 +1,36 @@
+{% load bootstrap4 %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {% if title %}
+        <title>{{title}}</title>
+    {% else %}
+        <title>Mark Ndonye</title>
+    {% endif %}
+    
+    {% block styles %}
+        {% bootstrap_css %}
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    {% endblock styles %}
+        
+        
+</head>
+<body>
+    {% include 'navbar.html' %}
+    
+    {% block content %}
+        
+    {% endblock content %}
+    
+    {% block script %}
+        {% bootstrap_javascript %}
+    {% endblock script %}
+        
+</body>
+</html>
